@@ -21,6 +21,7 @@ def _read_data():
 def _engineer_features(df):
     # Example of engineering a feature from existing
     df['FamilySize'] = df['SibSp'] + df['Parch'] + 1
+    df['FamilySize'] = df['FamilySize'].astype(float)
     return df
 
 def _vectorise_and_scale(df):
