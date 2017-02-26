@@ -9,8 +9,9 @@ from mlxtend.evaluate import confusion_matrix
 from mlxtend.plotting import plot_confusion_matrix
 
 def main():
+
     model = RandomForestClassifier() 
-    simple_eval(model)
+    cross_val_eval(model)
     confusion_matrix_eval(model)
 
 
